@@ -21,6 +21,8 @@ Q5)Write a function to print the nth term of the Fibonacci series using recursio
 Q6)Write a function to find the average of a set of numbers passed as arguments.
 Q7)Repeat problem 4 using Recursion.
 Q8)Repeat problem 2 using Recursion.
+Q9)Write a function to convert Celsius temperature into Fahrenheit.
+Q10)Repeat problem 3 using an iterative approach.
 
  */
 package com.day5;
@@ -38,7 +40,39 @@ public class Day5Ch7L35Q1 {
 		//q5();
 		//q6();
 		//q7();
-		q8();
+		//q8();
+		//q9();
+		q10();
+	}
+
+	static void q10(){
+		//Repeat problem 3 using an iterative approach.
+		Scanner sc = new Scanner(System.in);
+		System.out.print("enter n:");
+		int n = sc.nextInt();
+		System.out.println("sum of first "+n+" natural numbers :"+sumOfFirstN_NaturalNumbersIterative(n));
+	}
+
+	private static int sumOfFirstN_NaturalNumbersIterative(int n){
+		int sum = 0;
+		for (int i = 1; i <= n; i++){
+			sum += i;
+		}
+		return sum;
+	}
+
+	static void q9(){
+		//Write a function to convert Celsius temperature into Fahrenheit.
+		//f = (c*9/5)+32
+		Scanner sc = new Scanner(System.in);
+		System.out.print("enter temperature in celsius:");
+		float celsius = sc.nextFloat();
+		System.out.println(celsius+"celsius in fahrenheit:"+celsiusToFahrenheit(celsius));
+	}
+
+	private static float celsiusToFahrenheit(float celsius){
+		//f = (c*9/5)+32
+		return (float) (celsius*9/5.0f + 32);
 	}
 
 	static void q8(){
